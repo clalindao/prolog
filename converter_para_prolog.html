@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title></title>
+</head>
+<body>
+
+        <h1> Converter Sentença para Prolog </h1>
+        <br><br>
+        <label for="sentenca"> Sentença: </label>
+        <input type="text" id="sentenca">
+        <br><br>
+        <input type="submit" onclick="converter()" value="Converter">
+        <br><br>
+        <p id="resultado"></p>
+
+        <script type="text/javascript">
+
+                function converter() {
+
+                        let sentenca = document.getElementById('sentenca').value
+                        let resultado = document.getElementById('resultado')
+
+                        sentenca = sentenca.replaceAll(' ', ',')
+                        console.log(sentenca)
+                        sentenca = '[' + sentenca + ']'
+
+                        resultado.innerText = sentenca
+
+                }
+
+        </script>
+
+</body>
+</html>
